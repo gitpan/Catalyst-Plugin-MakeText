@@ -8,7 +8,7 @@ use Locale::Maketext::Simple(
     Path   => "$FindBin::Bin/../I18N"
 );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -88,9 +88,9 @@ sub loc {
 sub localize {
     my ( $c, $message ) = @_;
     if ($c->can('session')) {
-        &loc_lang($c->session->{'Catalyst::Plugin::MakeText'}->{'locale'});
+        &_loc_lang($c->session->{'Catalyst::Plugin::MakeText'}->{'locale'});
     } else {
-        &loc_lang($c->stash->{'Catalyst::Plugin::MakeText'}->{'locale'});
+        &_loc_lang($c->stash->{'Catalyst::Plugin::MakeText'}->{'locale'});
     }
     return &_loc($message);
 }
