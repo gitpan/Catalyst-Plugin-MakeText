@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Catalyst-Plugin-MakeText.t
+lib/Catalyst/Plugin/MakeText.pm
+META.yml                                 Module meta-data (added by MakeMaker)
